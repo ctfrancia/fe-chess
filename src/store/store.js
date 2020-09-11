@@ -1,5 +1,6 @@
 import Vue from "vue"
 import Vuex from "vuex"
+import { getAllTournaments } from '../services/TournamentService.js'
 
 Vue.use(Vuex)
 
@@ -19,18 +20,18 @@ const state = {
 }
 
 const mutations = {
-  change(state, flavor) {
-    state.user = flavor
-  },
-  getAllTournamentList(state, tournaments) {
-    state.tournaments = tournaments
+  tournamentList(state, tournaments) {
+    state.tournaments.generalTournamentList = tournaments
+    console.log(state.tournaments.generalTournamentList)
   }
 }
 const getters = {
-  flavor: state => state.user,
   generalTournamentList: state => state.tournaments.generalTournamentList
 }
 const actions = {
+  async updateTournamentList({ commit }) {
+    commit('tournamentList', await getAllTournaments())
+  }
 }
 
 export default new Vuex.Store({

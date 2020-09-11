@@ -6,8 +6,6 @@ export const getAllTournaments = async () => {
 
 
 /*
- * alksjdhflh:w
- *
 export const getSingleTournament = (id) => {
   return Api.
 }
