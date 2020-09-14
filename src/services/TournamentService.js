@@ -1,12 +1,20 @@
 import Api from './Api.js'
 
 export const getAllTournaments = async () => {
-  return await Api.get('tournament/latest')
+  try {
+    const res = await Api.get('tournament/latest')
+    return res.data
+  } catch(error) {
+    throw new Error('error in getAllTournaments', error)
+  }
 }
 
-
-/*
-export const getSingleTournament = (id) => {
-  return Api.
+export const getSingleTournament = async (id) => {
+  try {
+    const res =  await Api.get(`/tournament/${id}`)
+    return res.data
+  } catch (err) {
+    throw new Error('error while getting single tournament')
+  }
 }
-*/
+

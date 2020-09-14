@@ -22,7 +22,7 @@ const state = {
 const mutations = {
   tournamentList(state, tournaments) {
     state.tournaments.generalTournamentList = tournaments
-    console.log(state.tournaments.generalTournamentList)
+    console.log(JSON.stringify(state.tournaments.generalTournamentList))
   }
 }
 const getters = {
