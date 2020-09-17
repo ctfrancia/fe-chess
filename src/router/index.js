@@ -37,6 +37,11 @@ const routes = [{
     path: '/create-tournament',
     name: 'CreateTournament',
     component: () => import('../views/Register.vue')
+  },
+  {
+    path: '/tournament/:id',
+    name: 'Tournament',
+    component: () => import ('../views/Tournament.vue')
   }
 ]
 

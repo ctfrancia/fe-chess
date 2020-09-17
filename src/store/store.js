@@ -22,11 +22,13 @@ const state = {
 const mutations = {
   tournamentList(state, tournaments) {
     state.tournaments.generalTournamentList = tournaments
-    console.log(JSON.stringify(state.tournaments.generalTournamentList))
   }
 }
 const getters = {
-  generalTournamentList: state => state.tournaments.generalTournamentList
+  generalTournamentList: state => state.tournaments.generalTournamentList,
+  getSingleTournament: state => id => {
+    return state.tournaments.generalTournamentList.find(t => t.id === id)
+  }
 }
 const actions = {
   async updateTournamentList({ commit }) {
