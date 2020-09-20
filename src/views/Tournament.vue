@@ -8,6 +8,8 @@
       {{ tournament.Location }}
     </div>
     
+    <!-- TODO: need to modify back end for images -->
+
     <div class="tournament-meta-data">
       Online: {{ tournament.IsOnline }}
       Rated: {{ tournament.Rated }}
@@ -30,7 +32,6 @@
 
     <div>
     </div>
-  <!-- {{ tournament }} -->
   </div>
 </template>
 
@@ -40,7 +41,6 @@ export default {
   computed: {
     tournament() {
       const { id } = this.$route.params
-      // filter returns an array, but, there will only be one match
       return this.$store.state.tournaments.generalTournamentList.filter(t => t.ID === id)[0]
     }
   },

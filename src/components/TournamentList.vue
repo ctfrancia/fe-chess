@@ -10,7 +10,7 @@
         <th>time end</th>
       </tr>
 
-      <tr v-for="t in tournamentList" :key="t.id">
+      <tr v-for="t in tournamentList" :key="t.ID">
         <button @click="openTournament(t.ID)"><td > {{ t.Title }} </td></button>
         <td> {{ t.Location }} </td>
         <td> {{ t.TournamentDate }} </td>
@@ -26,17 +26,11 @@
 export default {
   name: 'TournamentList',
   computed: {
-    tournamentList () {
+    tournamentList() {
       return this.$store.getters.generalTournamentList
     }
   },
-  created() {
-    this.fetchTournaments()
-  },
-  methods: { 
-    async fetchTournaments() {
-      this.$store.dispatch('updateTournamentList')
-    },
+  methods: {
     openTournament(tID) {
       this.$router.push({name: 'Tournament', params: { id: tID }})
     }
