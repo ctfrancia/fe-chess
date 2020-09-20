@@ -1,6 +1,7 @@
 import Vue from "vue"
 import Vuex from "vuex"
 import { getAllTournaments } from '../services/TournamentService.js'
+import { submitUserRegistration } from '../services/UserService.js'
 
 Vue.use(Vuex)
 
@@ -22,6 +23,9 @@ const state = {
 const mutations = {
   tournamentList(state, tournaments) {
     state.tournaments.generalTournamentList = tournaments
+  },
+  userData(state, userData) {
+    state.user = userData
   }
 }
 const getters = {
@@ -33,6 +37,9 @@ const getters = {
 const actions = {
   async updateTournamentList({ commit }) {
     commit('tournamentList', await getAllTournaments())
+  },
+  async userRegistration({ commit }, userData) {
+    commit('userData', await submitUserRegistration(userData))
   }
 }
 
