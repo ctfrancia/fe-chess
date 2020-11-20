@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <!--
     <label for="flavor">Favorite ice cream flavor?</label>
     <input @input="changed" name="flavor">
     <p>You chose {{ $store.getters.flavor }}</p>
@@ -30,6 +31,7 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    -->
   </div>
 </template>
 
@@ -47,7 +49,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;

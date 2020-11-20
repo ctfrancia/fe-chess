@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/create-tournament">Create tournament</router-link> | 
-      <router-link to="/about">About</router-link> | 
-      <router-link to="/login">Login</router-link> | 
-      <router-link to="/sign-up">Sign Up</router-link> | 
-      <router-link to="/register">Register</router-link>
+      <router-link to="/">Inicio</router-link> |
+      <router-link to="/create-tournament">Criar Torneo</router-link> | 
+      <router-link to="/about">Sobre</router-link> | 
+      <router-link to="/login">Iniciar Sesión</router-link> | 
+      <!-- <router-link to="/sign-up">Sign Up</router-link> | -->
+      <router-link to="/register">Registrarse</router-link>
     </div>
     <router-view/>
   </div>
