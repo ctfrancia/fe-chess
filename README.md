@@ -22,3 +22,6 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Setting up database
+for setting up docker API please follow the [README](https://github.com/ctfrancia/bcnchess) at the server repo
